@@ -69,6 +69,11 @@ else
 void unrarfix(string fixfile)
 {
 
+
+    Directory.SetCurrentDirectory(Directory.GetParent(fixfile).FullName);
+
+    Console.WriteLine($"Current directory: {Directory.GetCurrentDirectory()}");
+
     string mainfile = Directory.GetFiles(Directory.GetCurrentDirectory(), "*.rar")[0];
     // string fixfile = Directory.GetFiles(Directory.GetCurrentDirectory() + "/Fix Repair", "*.rar")[0];
     Console.WriteLine($"Main file: {mainfile}");
@@ -109,7 +114,7 @@ void unrarfix(string fixfile)
     Console.WriteLine($"Game name: {gamename}");
     
 
-    gamepath = userProfilePath + "/Documents/games/" + gamename;
+    gamepath = Path.Combine(userProfilePath, "Documents", "games", gamename);
 
     Directory.Move(dirtomove, gamepath);
 
