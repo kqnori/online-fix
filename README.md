@@ -55,7 +55,7 @@ After installing, right-click any file in Dolphin:
 
 Look for **"Add to onlinefix launcher"** in the context menu.
 
-![](https://github.com/kqnori/online-fix/blob/main/assets/howtouse.gif)
+![me](https://github.com/kqnori/online-fix/blob/main/assets/howtouse.gif)
 
 ### Via terminal
 
