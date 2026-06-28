@@ -21,6 +21,6 @@ Name=Add to onlinefixlauncher
 
 [Desktop Action OnlineFix]
 Icon=
-Exec=/home/kq/Desktop/dotnet/onlinefix/bin/Debug/net10.0/onlinefix %f
+Exec=online-fix-importer %f
 Name=Add to onlinefix launcher
 Icon=oflogo
