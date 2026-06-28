@@ -6,7 +6,7 @@ ServiceTypes=all/allfiles
 X-KDE-Priority=TopLevel
 MimeType=application/vnd.rar;application/x-ms-dos-executable;
 X-KDE-Submenu=
-Version=5.21
+Version=1.0.1
 Icon=oflogo
 
 [Desktop Action createOnline]
