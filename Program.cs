@@ -26,10 +26,6 @@ if (!Directory.Exists(userProfilePath + "/.config/OFME-Linux/banners"))
 {
     Directory.CreateDirectory(userProfilePath + "/.config/OFME-Linux/banners");
 }
-if (!Directory.Exists(userProfilePath + "/.local/share/OnlineFix Linux Launcher/prefixes"))
-{
-    Directory.CreateDirectory(userProfilePath + "/.local/share/OnlineFix Linux Launcher/prefixes");
-}
 if (!Directory.Exists(tarGamePath))
 {
     Directory.CreateDirectory(tarGamePath);
