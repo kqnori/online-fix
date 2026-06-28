@@ -12,6 +12,29 @@ string gameexe = "";
 
 Console.WriteLine(args[0]);
 string userProfilePath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+string tarGamePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/games";
+
+if (!Directory.Exists(userProfilePath + "/.config/OFME-Linux"))
+{
+    Directory.CreateDirectory(userProfilePath + "/.config/OFME-Linux");
+}
+if (!Directory.Exists(userProfilePath + "/.config/OFME-Linux/icons"))
+{
+    Directory.CreateDirectory(userProfilePath + "/.config/OFME-Linux/icons");
+}
+if (!Directory.Exists(userProfilePath + "/.config/OFME-Linux/banners"))
+{
+    Directory.CreateDirectory(userProfilePath + "/.config/OFME-Linux/banners");
+}
+if (!Directory.Exists(userProfilePath + "/.local/share/OnlineFix Linux Launcher/prefixes"))
+{
+    Directory.CreateDirectory(userProfilePath + "/.local/share/OnlineFix Linux Launcher/prefixes");
+}
+if (!Directory.Exists(tarGamePath))
+{
+    Directory.CreateDirectory(tarGamePath);
+}
+if
 
 if (args[0].EndsWith(".exe"))
 {
