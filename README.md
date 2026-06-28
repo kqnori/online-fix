@@ -108,7 +108,7 @@ online-fix/
 
 ## Building from source
 
-Requires `dotnet-sdk-8.0` or later.
+Requires `dotnet-sdk-10.0` or later.
 
 ```bash
 dotnet publish onlinefix-out.csproj \
