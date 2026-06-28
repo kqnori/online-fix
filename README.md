@@ -85,9 +85,6 @@ Config and data is stored in:
 ├── Games.ini          ← game registry
 ├── icons/             ← extracted game icons
 └── banners/           ← Steam banner images
-
-~/.local/share/OnlineFix Linux Launcher/
-└── prefixes/          ← Proton prefix per game
 ```
 
 ---
