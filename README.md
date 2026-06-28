@@ -17,7 +17,7 @@ Right-click a `.rar` game archive or `.exe` in Dolphin and it will:
 - `icoextract`
 - `icoutils` (for `icotool`)
 - `dotnet-runtime` (if not using self-contained build)
-- [OnlineFix Linux Launcher](https://github.com/) — for launching the games after import
+- [OnlineFix Linux Launcher](https://github.com/ZzEdovec/onlinefix-linux) — for launching the games after import
 
 ---
 
