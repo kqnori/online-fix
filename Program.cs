@@ -1,8 +1,7 @@
-﻿using System.Diagnostics;
+using System.Diagnostics;
 using Newtonsoft.Json.Linq;
 using System.Net;
-
-Console.WriteLine(args[0]);
+using System;
 
 
 
@@ -11,6 +10,7 @@ string gamepath = "";
 string gamename = "";
 string gameexe = "";
 
+Console.WriteLine(args[0]);
 string userProfilePath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
 
 if (args[0].EndsWith(".exe"))
@@ -87,7 +87,7 @@ void unrarfix(string fixfile)
     Console.WriteLine($"Game name: {gamename}");
     
 
-    gamepath = userProfilePath + "/Documents/gry/" + gamename;
+    gamepath = userProfilePath + "/Documents/games/" + gamename;
 
     Directory.Move(dirtomove, gamepath);
 
