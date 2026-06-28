@@ -180,7 +180,7 @@ string get;
     {
          get = client.DownloadString($"https://store.steampowered.com/api/appdetails?appids={gameid}");
     }
-    File.WriteAllText($"{userProfilePath}/{gameid}.json", get);
+    //File.WriteAllText($"{userProfilePath}/{gameid}.json", get);
 
 
     dynamic json = JObject.Parse(get);
