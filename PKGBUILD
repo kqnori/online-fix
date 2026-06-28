@@ -1,6 +1,6 @@
 # PKGBUILD
 pkgname=online-fix-importer
-pkgver=1.0.3
+pkgver=1.0.4
 pkgrel=1
 pkgdesc="Onlinefix-launcher auto game installer"
 arch=('x86_64')
