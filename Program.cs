@@ -34,7 +34,6 @@ if (!Directory.Exists(tarGamePath))
 {
     Directory.CreateDirectory(tarGamePath);
 }
-if
 
 if (args[0].EndsWith(".exe"))
 {
