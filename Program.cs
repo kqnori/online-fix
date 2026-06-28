@@ -114,7 +114,7 @@ void unrarfix(string fixfile)
     Console.WriteLine($"Game name: {gamename}");
     
 
-    gamepath = Path.Combine(userProfilePath, "Documents", "games", gamename);
+    gamepath = Path.Combine(tarGamePath, gamename);
 
     foreach (var file in Directory.GetFiles(dirtomove))
     {
