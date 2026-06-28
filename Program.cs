@@ -116,6 +116,11 @@ void unrarfix(string fixfile)
 
     gamepath = Path.Combine(userProfilePath, "Documents", "games", gamename);
 
+    foreach (var file in Directory.GetFiles(dirtomove))
+    {
+        Console.WriteLine($"File: {file}");
+    }
+
     Directory.Move(dirtomove, gamepath);
 
     // delete old folders and rars
