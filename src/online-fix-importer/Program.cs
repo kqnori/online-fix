@@ -38,7 +38,9 @@ if (args[0].EndsWith(".exe"))
     AddToFix(args[0]);
     if (Directory.GetFiles(gamepath, "OnlineFix.ini", SearchOption.AllDirectories).Length == 0)
     {
+        Notify("This is not a valid OnlineFix game","error");
         Environment.Exit(1);
+        
     }
 
 }
@@ -47,6 +49,7 @@ else if (args[0].EndsWith(".rar"))
     unrarfix(args[0]);
     if (!Directory.Exists(Directory.GetCurrentDirectory() + "/Fix Repair"))
     {
+        Notify("This is not a valid OnlineFix rar file or Fix Repair folder is missing","error");
         Environment.Exit(1);
     }
 }
@@ -234,6 +237,7 @@ fixPath=
 banner={userProfilePath}/.config/OFME-Linux/banners/{gameid}header.png"+"\n\n";
 
     File.AppendAllText(userProfilePath + "/.config/OFME-Linux/Games.ini", prefix);
+    Notify($"Game {gamename} has been added to OnlineFix Linux Launcher","info");
 }
 
 
@@ -267,7 +271,20 @@ void unrar(string archivePath, string outputDir)
 
 
 
-
+void Notify(string message, string type)
+{
+    // string type = typeI switch
+    // {
+    //     0 => "info",
+    //     1 => "error",
+    // };
+    Process.Start(new ProcessStartInfo
+    {
+        FileName = "zenity",
+        Arguments = $"--{type} --title=\"Onlinefix importer\" --text=\"{message}\" --no-wrap",
+        UseShellExecute = false
+    })?.WaitForExit();
+}
 
 
 void ExtractIcon(string exePath, string outputPngPath)

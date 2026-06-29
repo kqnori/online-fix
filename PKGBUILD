@@ -1,12 +1,12 @@
 # PKGBUILD
 pkgname=online-fix-importer
-pkgver=1.0.6
+pkgver=1.0.7
 pkgrel=1
 pkgdesc="Onlinefix-launcher auto game installer"
 arch=('x86_64')
 license=('MIT')
 depends=('icoextract')
-makedepends=('dotnet-sdk' 'git' '7zip' 'icoextract' 'icoutils')
+makedepends=('dotnet-sdk' 'git' '7zip' 'icoextract' 'icoutils' 'zenity')
 source=("$pkgname::git+https://github.com/kqnori/online-fix.git")
 sha256sums=('SKIP')
 
