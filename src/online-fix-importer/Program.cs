@@ -13,7 +13,7 @@ string gameexe = "";
 Console.WriteLine(args[0]);
 string userProfilePath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
 string tarGamePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/games";
-Directory.SetCurrentDirectory(Directory.GetParent(fixfile).FullName);
+// Directory.SetCurrentDirectory(Directory.GetParent(fixfile).FullName);
 
 if (!Directory.Exists(userProfilePath + "/.config/OFME-Linux"))
 {
