@@ -13,6 +13,7 @@ string gameexe = "";
 Console.WriteLine(args[0]);
 string userProfilePath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
 string tarGamePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/games";
+Directory.SetCurrentDirectory(Directory.GetParent(fixfile).FullName);
 
 if (!Directory.Exists(userProfilePath + "/.config/OFME-Linux"))
 {
@@ -32,12 +33,22 @@ if (!Directory.Exists(tarGamePath))
 }
 
 if (args[0].EndsWith(".exe"))
+    
 {
     AddToFix(args[0]);
+    if (Directory.GetFiles(gamepath, "OnlineFix.ini", SearchOption.AllDirectories).Length == 0)
+    {
+        Environment.Exit(1);
+    }
+
 }
 else if (args[0].EndsWith(".rar"))
 {
     unrarfix(args[0]);
+    if (!Directory.Exists(Directory.GetCurrentDirectory() + "/Fix Repair"))
+    {
+        Environment.Exit(1);
+    }
 }
 else
 {
@@ -66,7 +77,6 @@ void unrarfix(string fixfile)
 {
 
 
-    Directory.SetCurrentDirectory(Directory.GetParent(fixfile).FullName);
 
     Console.WriteLine($"Current directory: {Directory.GetCurrentDirectory()}");
 
