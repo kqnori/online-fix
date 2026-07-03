@@ -23,18 +23,9 @@ Right-click a `.rar` game archive or `.exe` in Dolphin and it will:
 
 ## Installation
 
-### Option 1 — Manual with makepkg
+### Manual with makepkg
 
 ```bash
-git clone https://github.com/kqnori/online-fix.git
-cd online-fix
-makepkg -si
-```
-
-### Option 2 — Manual dependency install first
-
-```bash
-sudo pacman -S 7zip icoextract icoutils
 git clone https://github.com/kqnori/online-fix.git
 cd online-fix
 makepkg -si
@@ -96,6 +87,9 @@ Config and data is stored in:
 ```
 online-fix/
 ├── Program.cs               ← main app logic
+├── archives.cs              ← uncompressing logic
+├── varibles.cs              ← store all varibles
+├── functions.cs             ← every call function
 ├── onlinefix-out.csproj     ← .NET project file
 ├── online-fix.desktop       ← KDE service menu
 ├── oflogo.png               ← app icon
